@@ -56,6 +56,51 @@ CREATE TABLE spotify (
 );
 ```
 
+### Exploratory data analysis
+
+```sql
+SELECT COUNT(*) FROM spotify;
+
+```
+
+```sql
+SELECT COUNT(DISTINCT artist) FROM spotify;
+```
+
+```sql
+SELECT COUNT(DISTINCT album) FROM spotify;
+```
+
+```sql
+SELECT DISTINCT album_type FROM spotify;
+```
+
+```sql
+SELECT MAX(duration_min) FROM spotify;
+SELECT MIN(duration_min) FROM spotify;
+SELECT * FROM spotify
+WHERE duration_min=0;
+
+```
+```sql
+
+DELETE FROM spotify
+WHERE duration_min = 0;
+SELECT * FROM spotify
+WHERE duration_min = 0;
+
+```
+
+```sql
+SELECT DISTINCT channel FROM spotify;
+
+```
+
+```sql
+SELECT DISTINCT most_played_on FROM spotify;
+
+```
+
 ## Business Problems and Solutions
 
 ### 1.Retrieve the names of all tracks that have more than 1 billion streams.
